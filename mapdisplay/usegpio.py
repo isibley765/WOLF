@@ -20,6 +20,9 @@ signal.signal(signal.SIGINT, signal_handler)
 # setup GPIO using Board numbering
 GPIO.setmode(GPIO.BOARD)
 
+delay = [0, 0]
+start = [-1, 0]
+
 gout = [10, 12]
 
 gin = [3, 5]
@@ -35,14 +38,23 @@ for el in gin:
     # print("Setting pin {} to input...".format(el))
     GPIO.setup(el, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
-finish = start = time.time()
 
 while(True):
     for i in range(len(gin)):
         if GPIO.input(gin[i]) == GPIO.LOW:
             # print("Button {} was pushed!".format(gin[i]))
             GPIO.output(gout[i], GPIO.HIGH)
+            if start[i] != -1:
+                delay[i] = start[i] = time.time()
         else:
-            GPIO.output(gout[i], GPIO.LOW)
+            # print("{} vs {}: {}".format(delay[i], start[i], delay[i] - start[i]))
+            if start[i] == -1:
+                GPIO.output(gout[i], GPIO.LOW)
+            else:
+                if delay[i] - start[i] >= 3:
+                    GPIO.output(gout[i], GPIO.LOW)
+                    delay[i] = start[i] = 0
+                elif delay[i]:
+                    delay[i] = time.time()
 
     time.sleep(.1)
