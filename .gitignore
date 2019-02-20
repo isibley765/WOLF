@@ -89,6 +89,8 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+map/
+gpio/
 
 # Spyder project settings
 .spyderproject
