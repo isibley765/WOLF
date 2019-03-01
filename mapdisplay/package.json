@@ -1,0 +1,22 @@
+{
+  "name": "mapdisplay",
+  "version": "1.0.0",
+  "description": "Map display screen, shows wolf and fox information snippets and images depending on which button was pressed by the user. Map location of population geolocation also lights up.",
+  "main": "electron-setup.js",
+  "repository": "https://github.com/isibley765/WOLF",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "last": "electron .",
+    "start": "webpack -d && electron ."
+  },
+  "author": "Ian Sibley",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^4.0.6",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3",
+    "webpack-combine-loaders": "^2.0.4"
+  }
+}
