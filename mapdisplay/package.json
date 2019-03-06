@@ -7,14 +7,23 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "last": "electron .",
-    "start": "webpack -d && electron ."
+    "start": "webpack -d && electron .",
+    "build": "webpack --mode production"
   },
   "author": "Ian Sibley",
   "license": "ISC",
   "dependencies": {
     "electron": "^4.0.6",
+    "electron-context-menu": "^0.11.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
     "extract-text-webpack-plugin": "^3.0.2",
-    "style-loader": "^0.23.1",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
     "webpack-combine-loaders": "^2.0.4"

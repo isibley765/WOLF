@@ -104,3 +104,9 @@ gpio/
 
 # mypy
 .mypy_cache/
+
+# node
+node_modules/
+**package.json
+!mapdisplay/package.json
+build_finals

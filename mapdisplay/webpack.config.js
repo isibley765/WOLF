@@ -1,5 +1,3 @@
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var combineLoaders = require('webpack-combine-loaders');
 var path = require('path');
 
 var APP_DIR = `${__dirname}/display`;
@@ -13,30 +11,14 @@ var config = {
         path: BUILD_DIR,
         filename: '.[name].js',
     },
-    plugins: [
-        new ExtractTextPlugin(`${BUILD_DIR}.styles.css`),
-    ],
     module: {
-        loaders: [{
-            test: /\.jsx?$/,
-            include: APP_DIR,
-            loader: 'babel-loader',
+        rules: [{
+            test: /\.(js|jsx)$/,
             exclude: /node_modules/,
-            query: {
-                presets: ['react'],
-            },
-        }, {
-            test: /\.css$/,
-            loader: combineLoaders([{
-                loader: 'style-loader',
-            }, {
-                loader: 'css-loader',
-                query: {
-                    modules: true,
-                    localIdentName: '[name]__[local]___[hash:base64:5]',
-                },
-            }]),
-        }],
+            use: {
+              loader: "babel-loader"
+            }
+          }],
     },
 };
 
