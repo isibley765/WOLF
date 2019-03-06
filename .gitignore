@@ -107,6 +107,6 @@ gpio/
 
 # node
 node_modules/
-**package.json
+package-lock.json
 !mapdisplay/package.json
 build_finals
