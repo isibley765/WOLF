@@ -6,20 +6,10 @@ const context_menu = require('electron-context-menu');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
-const cvbin = './pakfront/bin/';
-var cvspawns = {};
-var cvref = {};
 
-// TODO: webpack.config.js needs to be configured to work with multiple input files
 const files = ['display/main.html'];
 
-const windows = [null, null, null];
-
-// Spawning process variables, for proof of concept only currently
-var py = spawn('python', [`${cvbin}print.py`]);
-
-var data = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-var dataString = '';
+const windows = [null];
 
 // ----------------------------------------------------------------------------------------
 // Importing this adds a right-click menu with 'Inspect Element' option [worth it]
@@ -49,7 +39,8 @@ function createWindow() {
     for (i = 0; i < files.length; i++) {
         // Curious if a macOS works better this way with multi-windows...
         if (windows[i] == null) {
-            windows[i] = new BrowserWindow({ width: 1600, height: 1200, nodeIntegration: true });
+            windows[i] = new BrowserWindow({ 
+                width: 1600, height: 1200, nodeIntegration: true });
 
             // and load the index.html of the app.
             windows[i].loadURL(url.format({
