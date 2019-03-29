@@ -18,15 +18,18 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className={styles.container} >
-                <div className={styles.data_column} >
-                    <Card title="Show me 1" />
+            <div className={styles.container_row} >
+                <div className={styles.data_row} >
+                    <Card title="Show me 1.1" />
+                    <Card title="Show me 1.2" />
+                    <Card title="Show me 1.3" />
                 </div>
-                <div className={styles.data_column} >
-                    <Card title="Show me 2" />
+                <div className={styles.data_row} >
+                    <Card title="Show me 2.1" />
+                    <Card title="Show me 2.2" />
                 </div>
-                <div className={styles.data_column} >
-                    <Card title="Show me 3" />
+                <div className={styles.data_row} >
+                    <Card title="Show me 3.1" />
                 </div>
             </div>
         )
