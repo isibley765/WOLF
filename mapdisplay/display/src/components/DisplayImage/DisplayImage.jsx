@@ -9,13 +9,12 @@ export default class DisplayImage extends React.Component {
     }
 
     componentDidMount() {
-        console.log("Did mount");
+        console.log(this.props.imgurl);
     }
 
     render() {
         return (
-            <div className={styles.container}>
-            </div>
+                <img src={this.props.imgurl} alt="Oops :/" height="100" /> 
         )
     }
 }

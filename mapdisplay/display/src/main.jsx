@@ -4,6 +4,7 @@ import { render } from 'react-dom';
 import styles from "./main.css";
 
 import TemplateExample from './components/TemplateExample/TemplateExample.jsx';
+import Image from './components/DisplayImage/DisplayImage.jsx';
 import Card1 from './components/Card/Card1.jsx';
 import Card2 from './components/Card/Card2.jsx';
 
@@ -34,6 +35,7 @@ class App extends React.Component {
                 </div>
                 <div className={styles.data_row} >
                     <Card1 title="Show me 1.1" />
+                    <Image imgurl="src/images/gray-fox-big-eyes.jpg"/>
                 </div>
             </div>
         )

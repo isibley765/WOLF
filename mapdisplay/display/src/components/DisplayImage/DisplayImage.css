@@ -1,3 +1,5 @@
 .container {
     background-color: red;
-}
+    flex-grow: 1;
+    height: 100%;
+ }
