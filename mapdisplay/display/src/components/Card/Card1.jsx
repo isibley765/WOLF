@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styles from './Card.css';
 
 
-export default class Card extends Component {
+export default class Card1 extends Component {
     constructor(props) {
         super(props);
     }
@@ -21,7 +21,7 @@ export default class Card extends Component {
 
     render() {
         return (
-            <div className={styles.container}>
+            <div className={styles.container1}>
                 <div className={styles.card}>
                     <div className={this.props.title != undefined ? styles.mainContainerBot : styles.mainContainerAll}>
                         {this.makeTitle(this.props.title != undefined)}
