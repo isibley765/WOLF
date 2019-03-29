@@ -21,19 +21,19 @@ class App extends React.Component {
         return (
             <div className={styles.container_row} >
                 <div className={styles.data_row} >
-                    <Card1 className={styles.flex1} title="Show me 1.1" />
-                    <Card1 className={styles.flex1} title="Show me 1.2" />
-                    <Card1 className={styles.flex1} title="Show me 1.3" />
+                    <Card1 title="Show me 1.1" />
+                    <Card1 title="Show me 1.2" />
+                    <Card1 title="Show me 1.3" />
                 </div>
                 <div className={styles.data_row} >
-                    <Card2 className={styles.flex1} title="Show me 2.1" />
-                    <Card1 className={styles.flex1} title="Show me 1.2" />
+                    <Card2 title="Show me 2.1" />
+                    <Card1 title="Show me 1.2" />
                 </div>
                 <div className={styles.data_row} >
-                    <Card2 className={styles.flex1} title="Show me 2.1" />
+                    <Card2 title="Show me 2.1" />
                 </div>
                 <div className={styles.data_row} >
-                    <Card1 className={styles.flex1} title="Show me 1.1" />
+                    <Card1 title="Show me 1.1" />
                 </div>
             </div>
         )
