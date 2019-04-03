@@ -7,6 +7,7 @@ import TemplateExample from './components/TemplateExample/TemplateExample.jsx';
 import Image from './components/DisplayImage/DisplayImage.jsx';
 import Card1 from './components/Card/Card1.jsx';
 import Card2 from './components/Card/Card2.jsx';
+import CardContent from './components/Card/CardContent.jsx';
 
 class App extends React.Component {
     constructor(props) {
@@ -34,8 +35,10 @@ class App extends React.Component {
                     <Card2 title="Show me 2.1" />
                 </div>
                 <div className={styles.data_row} >
-                    <Card1 title="Show me 1.1" />
-                    <Image imgurl="src/images/gray-fox-big-eyes.jpg"/>
+                    <Card2 title="Show me 1.1" />
+                    <CardContent>
+                        <Image imgurl="src/images/gray-fox-big-eyes.jpg"/>
+                    </CardContent>
                 </div>
             </div>
         )
