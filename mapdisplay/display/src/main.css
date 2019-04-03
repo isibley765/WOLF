@@ -8,8 +8,6 @@
 .container_row {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
 }
 
 .data_column {
@@ -18,10 +16,30 @@
 }
 
 .data_row {
-    display: flex;
+    flex-grow: 1;
     width: 100%;
+}
+
+.row40 {
+    height: 40vh;
+}
+
+.row60 {
+    height: 60vh;
+}
+
+.column40 {
+    width: 40vw;
+}
+
+.column60 {
+    width: 60vw;
 }
 
 .flex1 {
     flex-grow: 1;
+}
+
+.flex2 {
+    flex-grow: 2;
 }

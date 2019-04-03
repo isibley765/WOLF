@@ -3,3 +3,8 @@
     flex-grow: 1;
     height: 100%;
  }
+
+ .imagestyle {
+     margin: auto;
+     width: 100%;
+ }

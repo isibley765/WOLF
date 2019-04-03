@@ -14,7 +14,7 @@ export default class DisplayImage extends React.Component {
 
     render() {
         return (
-                <img src={this.props.imgurl} alt="Oops :/" height="100" /> 
+                <img className={styles.imagestyle} src={this.props.imgurl} alt="Oops :/" /> 
         )
     }
 }

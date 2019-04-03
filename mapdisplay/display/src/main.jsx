@@ -17,28 +17,33 @@ class App extends React.Component {
 
     componentDidMount() {
         console.log("Did mount");
+
+        console.log({...styles.data_column, ...styles.flex1})
+        console.log(styles.data_column)
     }
 
     render() {
         return (
-            <div className={styles.container_row} >
-                <div className={styles.data_row} >
-                    <Card1 title="Show me 1.1" />
-                    <Card1 title="Show me 1.2" />
-                    <Card1 title="Show me 1.3" />
+            <div className={`container-fluid`}>
+                <div className={`row`} >
+                    <div className={`col-sm-4 ${styles.row40}`} >
+                            <Image imgurl="src/images/gray-fox-big-eyes.jpg"/>
+                    </div>
+                    <div className={`col-sm-8`} >
+                        <Card1 title="Show me 2.1" />
+                        <Card1 title="Show me 1.2" />
+                    </div>
                 </div>
-                <div className={styles.data_row} >
-                    <Card2 title="Show me 2.1" />
-                    <Card1 title="Show me 1.2" />
-                </div>
-                <div className={styles.data_row} >
-                    <Card2 title="Show me 2.1" />
-                </div>
-                <div className={styles.data_row} >
-                    <Card2 title="Show me 1.1" />
-                    <CardContent>
-                        <Image imgurl="src/images/gray-fox-big-eyes.jpg"/>
-                    </CardContent>
+                <div className={`row`} >
+                    <div className={`col-sm-4 ${styles.row60}`} >
+                        <Card2 title="Show me 2.1" />
+                    </div>
+                    <div className={`col-sm-4`} >
+                        <Card2 title="Show me 2.1" />
+                    </div>
+                    <div className={`col-sm-4`} >
+                        <Card2 title="Show me 1.1" />
+                    </div>
                 </div>
             </div>
         )
