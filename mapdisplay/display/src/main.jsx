@@ -42,7 +42,10 @@ class App extends React.Component {
                         <Card2 title="Show me 2.1" />
                     </div>
                     <div className={`col-sm-4`} >
-                        <Card2 title="Show me 1.1" />
+                        <Card2 />
+                        <CardContent >
+                                <Image imgurl="src/images/gray-fox-big-eyes.jpg"/>
+                        </CardContent>
                     </div>
                 </div>
             </div>
