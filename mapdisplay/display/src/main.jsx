@@ -5,6 +5,7 @@ import styles from "./main.css";
 
 import TemplateExample from './components/TemplateExample/TemplateExample.jsx';
 import Image from './components/DisplayImage/DisplayImage.jsx';
+import TextView from './components/TextView/TextView.jsx';
 import Card1 from './components/Card/Card1.jsx';
 import Card2 from './components/Card/Card2.jsx';
 import CardContent from './components/Card/CardContent.jsx';
@@ -31,7 +32,9 @@ class App extends React.Component {
                     </div>
                     <div className={`col-sm-8`} >
                         <Card1 title="Show me 2.1" />
-                        <Card1 title="Show me 1.2" />
+                        <CardContent >
+                            <TextView paragraphs={["This is text 1", "This is text 2"]} />
+                        </CardContent>
                     </div>
                 </div>
                 <div className={`row`} >
