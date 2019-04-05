@@ -5,6 +5,7 @@ import styles from "./main.css";
 
 import TemplateExample from './components/TemplateExample/TemplateExample.jsx';
 import Image from './components/DisplayImage/DisplayImage.jsx';
+import Text from './components/DisplayText/DisplayText.jsx';
 import Card1 from './components/Card/Card1.jsx';
 import Card2 from './components/Card/Card2.jsx';
 import CardContent from './components/Card/CardContent.jsx';
@@ -39,7 +40,10 @@ class App extends React.Component {
                         <Card2 title="Show me 2.1" />
                     </div>
                     <div className={`col-sm-4`} >
-                        <Card2 title="Show me 2.1" />
+                        <Card2 />
+                        <CardContent>
+                                <Text list={["This is a pretty fox", "This wolf has pretty eyes"]} />
+                        </CardContent>
                     </div>
                     <div className={`col-sm-4`} >
                         <Card2 />
