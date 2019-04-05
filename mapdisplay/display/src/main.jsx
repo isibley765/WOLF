@@ -28,7 +28,10 @@ class App extends React.Component {
             <div className={`container-fluid`}>
                 <div className={`row`} >
                     <div className={`col-sm-4 ${styles.row40}`} >
-                            <Image imgurl="src/images/gray-fox-big-eyes.jpg"/>
+                        <Card2 />
+                        <CardContent>
+                                <Image imgurl="src/images/gray-fox-big-eyes.jpg"/>
+                        </CardContent>
                     </div>
                     <div className={`col-sm-8`} >
                         <Card1 title="Show me 2.1" />
@@ -42,12 +45,12 @@ class App extends React.Component {
                     <div className={`col-sm-4`} >
                         <Card2 />
                         <CardContent>
-                                <Text list={["This is a pretty fox", "This wolf has pretty eyes"]} />
+                                <Text list={["This is a pretty fox", "This FOX has pretty eyes"]} />
                         </CardContent>
                     </div>
                     <div className={`col-sm-4`} >
                         <Card2 />
-                        <CardContent >
+                        <CardContent>
                                 <Image imgurl="src/images/gray-fox-big-eyes.jpg"/>
                         </CardContent>
                     </div>
