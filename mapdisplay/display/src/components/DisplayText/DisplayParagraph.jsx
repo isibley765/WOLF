@@ -13,19 +13,19 @@ export default class DisplayText extends React.Component {
         const list = this.props.list;
 
         return list.map((text, index) => {
-            return <li key={index}>{text} </li>
+            return <p key={index}>{text} </p>
         });
     }
 
     componentDidMount() {
-        console.log(this.props);
+        // console.log(this.props);
     }
 
     render() {
         return (
-            <ul className={styles.container}>
+            <div className={styles.container}>
                 {this.renderList()}
-            </ul>
+            </div>
         )
     }
 }

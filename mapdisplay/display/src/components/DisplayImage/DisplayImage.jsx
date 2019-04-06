@@ -5,6 +5,10 @@ import styles from "./DisplayImage.css"
 export default class DisplayImage extends React.Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            width: this.props.width ? this.props.width : 100,
+        };
  
     }
 
@@ -14,7 +18,7 @@ export default class DisplayImage extends React.Component {
 
     render() {
         return (
-                <img className={styles.imagestyle} src={this.props.imgurl} alt="Oops :/" /> 
+                <img className={styles.imagestyle} style={{width: `${this.state.width}%`}} src={this.props.imgurl} alt="Oops :/" /> 
         )
     }
 }
