@@ -41,6 +41,8 @@ function createWindow() {
         if (windows[i] == null) {
             windows[i] = new BrowserWindow({ 
                 width: 1600, height: 1200, nodeIntegration: true });
+            
+            windows[i].maximize();
 
             // and load the index.html of the app.
             windows[i].loadURL(url.format({
@@ -50,7 +52,7 @@ function createWindow() {
             }));
 
             // Open the DevTools.
-            windows[i].webContents.openDevTools();
+            // windows[i].webContents.openDevTools();
 
             // Emitted when the window is closed.
             windows[i].on('closed', closeWin(i));
