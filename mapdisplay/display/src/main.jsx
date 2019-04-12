@@ -53,7 +53,7 @@ class App extends React.Component {
                 <div className={`row ${styles.row60}`} >
                     <div className={`col-sm-4`} >
                         <CardContent>
-                                <TextParagraphs list={this.state.base_text.slice(2,4)} />
+                                <TextParagraphs list={this.state.base_text.slice(2,3)} />
                         </CardContent>
                         <CardContent>
                                 <Image
